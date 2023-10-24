@@ -3,6 +3,7 @@ const { createApp } = Vue
 createApp({
     data(){
         return{
+            setInterval: null,
             currentIndex: 0,
             slides: [
                 {
@@ -47,9 +48,12 @@ createApp({
             this.currentIndex = thumbIndex;
         },
         setTime(){
-            setInterval(() => {
-                this.currentIndex++;
-            },3000)
+            if(setInterval === null){
+                setInterval(() => {
+                    this.nextImage( )
+                },3000)
+            }
+            
         },
     },
 

@@ -10,10 +10,10 @@
 <body>
     <main id="app">
         <div class="container">
-            <div class="card-movie">
+            <div class="card-movie" @="setTime()">
                 <img :src="slides[currentIndex].image" alt="" >
 
-                <div class="thumbnails" @interval="setTime()" >
+                <div class="thumbnails"  >
                     <figure class="thumb" v-for="slide in slides" >
                         <img :src="slide.image" alt="">
                     </figure>
@@ -21,10 +21,10 @@
 
                 <div class="navigator">
                     <div class="prev" @click="prevImage('prev')">
-                        ciao
+                        avanti
                     </div>
-                    <div class="next" @click="nextImage('next')">
-                        ciao
+                    <div class="next" @click="nextImage()">
+                        dietro
                     </div>
                 </div>
             </div>
