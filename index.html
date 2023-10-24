@@ -10,9 +10,27 @@
 <body>
     <main id="app">
         <div class="container">
-            <div>
-                <img :src="slides[0]" alt="">
+            <div class="card-movie">
+                <img :src="slides[currentIndex].image" alt="" >
+
+                <div class="thumbnails">
+                    <figure class="thumb" :class="currentIndex === index ? 'active' : ''"
+                        v-for="slide in slides" @click="changeImage(index)">
+                        <img :src="image" alt="">
+                    </figure>
+                </div>
+
+                <div class="navigator">
+                    <div class="prev" @click="prevImage('prev')">
+                        ciao
+                    </div>
+                    <div class="next" @click="nextImage('next')">
+                        ciao
+                    </div>
+                </div>
             </div>
+
+           
             
         </div>
     </main>
