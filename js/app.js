@@ -45,7 +45,12 @@ createApp({
         changeImage(thumbIndex) {
             console.log("Ho cliccato sulla thumb ad indice ", thumbIndex)
             this.currentIndex = thumbIndex;
-        }
+        },
+        setTime(){
+            setInterval(() => {
+                this.currentIndex++;
+            },3000)
+        },
     },
 
 }).mount('#app');
